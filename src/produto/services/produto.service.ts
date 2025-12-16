@@ -49,7 +49,9 @@ export class ProdutoService {
     async update(produto: Produto): Promise<Produto> {
         await this.findById(produto.id);
 
-        await this.validarCategoria(produto.categoria);
+        if (produto.categoria) {
+            await this.validarCategoria(produto.categoria);
+        }
 
         return await this.produtoRepository.save(produto);
     }
