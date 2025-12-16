@@ -5,7 +5,7 @@ import { Categoria } from "../../categoria/entities/categoria.entity";
 @Entity({ name: "tb_produtos" })
 export class Produto {
 
-    @PrimaryGeneratedColumn({ type: "bigint" })
+    @PrimaryGeneratedColumn()
     id: number;
 
     @Column({ length: 255, nullable: false })
