@@ -8,7 +8,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('Farmacia')
     .setDescription('Projeto Farmacia')
-    .setContact("Generation Brasil", "http://www.generationbrasil.online", "generation@email.com")
+    .setContact("Generation Brasil", "https://github.com/Dan2a", "dan.andrade313@gmail.com")
     .setVersion('1.0')
     .addBearerAuth()
     .build();
