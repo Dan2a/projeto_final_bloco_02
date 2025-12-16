@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Categoria } from './categoria/entities/categoria.entity';
+import { CategoriaModule } from './categoria/categoria.module';
 
 @Module({
   imports: [
@@ -18,7 +19,8 @@ import { Categoria } from './categoria/entities/categoria.entity';
       database: process.env.DB_NAME,
       entities: [Categoria],
       synchronize: true,
-    })
+    }),
+    CategoriaModule
   ],
   controllers: [],
   providers: [],
